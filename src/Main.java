@@ -5,6 +5,7 @@ public class Main {
         printCardDeliveryDays(95);
         printCardDeliveryDays(900);
     }
+
     private static void checkIsLeapYear(int year) {
         if (year % 4 == 0 && 100 != 0 || year % 400 == 0) {
             System.out.println(year + " - високосный год");
@@ -33,19 +34,7 @@ public class Main {
         } else {
             System.out.println("Для OC " + mobileOsName + " необходимо установить обычную версию приложения");
         }
-
-            switch (mobileOS) {
-                case 0:
-                    mobileOsName = "iOS";
-                    break;
-                case 1:
-                    mobileOsName = "Android";
-                    break;
-                default:
-                    mobileOsName = "неизвестная OC";
-            }
-
-        }
+    }
 
     private static int calcCardDeliveryDays(int distance) {
         if (distance <= 20) {
@@ -62,7 +51,7 @@ public class Main {
     private static void printCardDeliveryDays(int distance) {
         int days = calcCardDeliveryDays(distance);
 
-        if (days >0) {
+        if (days > 0) {
             System.out.println("Потребуется дней:" + days);
         } else {
             System.out.println("Доставка не осуществляется");
